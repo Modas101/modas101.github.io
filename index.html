@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101010">
+  <title>Kenny Lin — Games & Systems</title>
+  <meta name="description" content="I'm Kenny, a Computer Science and Statistics student at UBC. I build multiplayer games and the systems behind them.">
+  <link rel="canonical" href="https://modas101.github.io/">
+  <meta property="og:title" content="Kenny Lin — Games & Systems">
+  <meta property="og:description" content="Multiplayer games. Practical tools. The systems behind them.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://modas101.github.io/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preload" href="fonts/barlow-900.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/barlow-900-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/space-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // The page stays usable if JavaScript, storage, or animation isn't available.
+    try {
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches && !sessionStorage.getItem('kenny-intro-seen') && !location.hash) {
+        document.documentElement.classList.add('intro-pending');
+        window.introFailSafe = setTimeout(function () { document.documentElement.classList.remove('intro-pending'); }, 5000);
+      }
+    } catch (_) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#work">Skip to projects</a>
+  <section class="opening" id="opening" aria-label="Kenny's story" aria-hidden="true">
+    <div class="opening-grain" aria-hidden="true"></div>
+    <div class="story-slash" aria-hidden="true"></div>
+    <div class="story-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="story-header"><span>KENNY LIN / THE SHORT VERSION</span><button id="intro-skip" type="button">Skip intro <span>Esc</span></button></div>
+    <div class="story-stage">
+      <div class="story-copy" id="story-copy" aria-live="off"></div>
+      <div class="resume-preview" id="resume-preview" aria-hidden="true">
+        <div class="resume-preview-label">RÉSUMÉ EXCERPT / GAME PROJECTS</div>
+        <div class="resume-viewport"><img class="resume-excerpt-image" id="resume-paper" src="resume-excerpt.png" width="1668" height="1362" alt=""><div class="scan-target"><span>PROJECT FOUND</span><i></i><i></i><i></i><i></i></div><div class="scan-line"></div></div>
+        <span class="resume-preview-footnote">EXPERIENCE & PROJECTS · SEPTEMBER 2026</span>
+      </div>
+    </div>
+    <div class="story-controls"><div class="story-progress" aria-hidden="true"><span id="story-progress-fill"></span></div><span class="story-count" id="story-count">01 / 17</span><div class="story-transport"><button id="story-prev" type="button" aria-label="Previous scene">Previous</button><button id="story-pause" type="button">Pause</button><button id="story-next" type="button" aria-label="Next scene">Next</button></div><button id="story-read" type="button">Read instead</button></div>
+  </section>
+
+  <div class="page-shell">
+    <header class="site-header" id="top">
+      <a class="wordmark" href="#top" aria-label="Kenny Lin home"><span class="wordmark-symbol" aria-hidden="true">K</span><span>KENNY LIN</span></a>
+      <nav aria-label="Main navigation"><a href="#work">Work<span aria-hidden="true">01</span></a><a href="#about">About<span aria-hidden="true">02</span></a><a href="#contact">Contact<span aria-hidden="true">03</span></a></nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-topline"><span>DEVELOPER & GAME MAKER</span><span>VANCOUVER, BC</span></div>
+        <div class="hero-composition">
+          <h1 id="hero-title"><span class="hello-line">Hi. <span>I'm</span></span><span class="name-line">kenny<span class="name-period">.</span></span></h1>
+          <div class="hero-print" aria-hidden="true">
+            <div class="print-plate"></div><div class="print-dots"></div>
+            <svg class="spiral-mark" viewBox="0 0 500 500" fill="none"><g stroke="currentColor" stroke-linecap="square"><path stroke-width="29" d="M258 251c-8-25-42-21-46 2-7 40 50 68 89 35 60-52 12-136-57-135-112 3-148 143-56 211 120 88 266-23 244-157C407 50 207-19 85 94-58 226 18 455 203 483"/><path stroke-width="7" d="M229 243c-12 0-15 22 4 29 31 13 64-29 40-57-43-49-121-8-111 54 13 87 132 115 192 41 84-104-2-248-125-238C70 85 8 276 111 389"/></g></svg>
+            <div class="print-star star-one">✦</div><div class="print-star star-two">✦</div>
+            <span class="print-caption">ALWAYS<br>BUILDING.</span><span class="print-registration">+</span>
+          </div>
+          <div class="hero-side-note" aria-hidden="true">PLAY / MAKE / REPEAT</div>
+        </div>
+        <div class="hero-bottom">
+          <p>I build multiplayer games<br>and the systems behind them.</p>
+          <div class="hero-actions"><a class="cut-button" href="#work"><span>See my work</span><span class="button-cross" aria-hidden="true">✦</span></a><button class="replay-button" id="replay-intro" type="button" hidden>Replay intro</button></div>
+        </div>
+        <div class="hero-footnote"><span>CS + STATISTICS @ UBC</span><span>SCROLL TO EXPLORE</span><span>SELECTED WORK · 01—03</span></div>
+      </section>
+
+      <section class="work section-wrap" id="work" aria-labelledby="work-title" tabindex="-1">
+        <div class="section-top"><span class="section-index">01 / SELECTED WORK</span><div class="filters" hidden role="group" aria-label="Filter projects"><button type="button" class="active" data-filter="all" aria-pressed="true">All</button><button type="button" data-filter="game" aria-pressed="false">Games</button><button type="button" data-filter="tool" aria-pressed="false">Tools</button></div></div>
+        <h2 id="work-title">Less talk.<br><span class="offset-word">More <em>building.</em></span></h2>
+        <p class="filter-status sr-only" role="status" aria-live="polite"></p>
+
+        <article class="project project-isles" data-category="game">
+          <div class="project-image-wrap"><div class="image-corner" aria-hidden="true">01</div><img src="isles.png" width="768" height="432" alt="My Floating Isles game artwork: a character building a floating island" loading="lazy" decoding="async"><div class="image-label">MY FLOATING ISLES <span>ART BY @GIBBLETIGGLE</span></div></div>
+          <div class="project-info"><div class="project-kicker"><span>ROBLOX / MULTIPLAYER</span><span>01</span></div><h3>My Floating<br>Isles<span>.</span></h3><p>A multiplayer island-building game. I work on persistent saves, safer data migrations, and getting new players into the game.</p><div class="project-stat"><strong>260k+</strong><span>monthly active users<br><small>September 2026</small></span></div><div class="project-tags">Luau / Data persistence / Onboarding</div><details><summary>Under the hood <span aria-hidden="true">+</span></summary><p>Island-save compression reduced data size by 95%. Version guards help protect saves when players join older servers. I also used the onboarding funnel to prioritize the first-session experience.</p></details><a class="text-link" href="https://www.roblox.com/games/108480725212443/My-Floating-Isles" target="_blank" rel="noopener noreferrer">Play on Roblox <span class="link-mark" aria-hidden="true">+</span></a></div>
+        </article>
+
+        <article class="project project-tivelet" data-category="game">
+          <div class="project-image-wrap"><div class="image-corner" aria-hidden="true">02</div><img src="tivelet.jpg" width="768" height="432" alt="Tivelet game artwork: an armored character holding a sword" loading="lazy" decoding="async"><div class="image-label">TIVELET <span>OFFICIAL GAME ARTWORK</span></div></div>
+          <div class="project-info"><div class="project-kicker"><span>ROBLOX / ACTION RPG</span><span>02</span></div><h3>Tivelet<span>.</span></h3><p>A souls-like RPG with a voxel world, custom replication, and a character controller with client/server prediction.</p><div class="project-stat"><strong>~70%</strong><span>less memory<br><small>through culling + greedy meshing</small></span></div><div class="project-tags">Voxels / Networking / Optimization</div><details><summary>Under the hood <span aria-hidden="true">+</span></summary><p>Over roughly two years, I built systems for a world made from Roblox parts. Culling and greedy meshing reduced its memory footprint; prediction helped balance responsive controls with server authority.</p></details><a class="text-link" href="https://www.roblox.com/games/14467558107/Tivelet" target="_blank" rel="noopener noreferrer">View on Roblox <span class="link-mark" aria-hidden="true">+</span></a></div>
+        </article>
+
+        <article class="project project-tool" data-category="tool">
+          <div class="tool-poster" aria-hidden="true"><span class="poster-top">PYTHON / WINDOWS + LINUX</span><span class="poster-bracket">[</span><strong>CHECK.<br><span>THEN</span><br>TRADE.</strong><span class="poster-bottom">OUTBOUND TRADE CHECKER <span>03</span></span></div>
+          <div class="project-info"><div class="project-kicker"><span>PYTHON / UTILITY</span><span>03</span></div><h3>Outbound<br>Trade Checker<span>.</span></h3><p>A tool that helps users catch outdated trades before they become costly mistakes. Built around API limits, caching, and selective refreshes.</p><div class="project-stat"><strong>100+</strong><span>users</span></div><div class="project-tags">Python / APIs / Caching</div><details><summary>Under the hood <span aria-hidden="true">+</span></summary><p>I focused refresh requests where they mattered, maintained Windows and Linux compatibility, and adapted the tool as upstream APIs changed.</p></details></div>
+        </article>
+      </section>
+
+      <section class="about section-wrap" id="about" aria-labelledby="about-title">
+        <span class="section-index">02 / A LITTLE ABOUT ME</span>
+        <div class="about-layout"><div><h2 id="about-title">Curious by<br><em>default.</em></h2><span class="about-asterisk" aria-hidden="true">✳</span></div><div class="about-copy"><p class="about-lead">I like making things people use.<br>Then making them better.</p><p>I'm studying Computer Science and Statistics at UBC. Games got me into coding. These days, I work on everything from combat mechanics to networking and persistent data.</p><p>I do a bit of everything: animation, music, building, modelling, programming, UI, frontend, backend, systems design, product design, and live ops.</p><p>I also love to run. Fun fact.</p><p>I'm looking for software co-op opportunities where I can build, learn, and contribute to a team.</p><details class="story-transcript" id="story-transcript"><summary>The story behind it <span aria-hidden="true">+</span></summary><div tabindex="-1" id="story-transcript-text"><p>Hi, I'm Kenny. If you've seen my résumé (probably), it's very game focused. Let me tell you about myself.</p><p>Like many other people in 2020, I found myself with a lot of time! The first 6 months were fun, but I felt bored. I didn't know what it was at the time, but I felt <u>unfulfilled</u>.</p><p>I needed to create something of value. So I turned to game development. It's a tangible way of seeing your progress in real time.</p><p>And this is a little egotistical, but I love the compliments I get for my work. Hope you enjoy your time looking at my portfolio!</p></div></details><dl class="skills"><div><dt>LANGUAGES</dt><dd>Luau, Python, Java, C++, C, R</dd></div><div><dt>TOOLS & ENGINES</dt><dd>Roblox Studio, Rojo, Git, Godot, Unity</dd></div></dl></div></div>
+      </section>
+
+      <section class="contact section-wrap" id="contact" aria-labelledby="contact-title"><div class="contact-halftone" aria-hidden="true"></div><span class="section-index">03 / SAY HELLO</span><div class="contact-title-row"><h2 id="contact-title">Let's make<br><em>something.</em></h2><span class="contact-star" aria-hidden="true">✦</span></div><div class="contact-links"><a class="contact-email" href="mailto:modas1029@gmail.com">modas1029@gmail.com</a><a class="contact-github" href="https://github.com/Modas101" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">+</span></a></div></section>
+    </main>
+    <footer><span>© 2026 KENNY LIN</span><span>VANCOUVER, CANADA</span><a href="#top">BACK TO TOP</a></footer>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>
