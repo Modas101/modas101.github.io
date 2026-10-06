@@ -1,0 +1,47 @@
+Audio sources and licenses
+Verified: 2026-10-06 UTC
+
+All audio assets in this folder derive from works released under CC0 1.0
+Universal (public-domain dedication). CC0 permits copying, modification,
+distribution and performance, including commercial use. The original creators
+are credited below for provenance; attribution is not required by CC0.
+License: https://creativecommons.org/publicdomain/zero/1.0/
+Legal code: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+moil-loop.mp3
+  Original: "Moil" by Ruskerdax
+  Source: https://opengameart.org/content/moil
+  Original download: https://opengameart.org/sites/default/files/ruskerdax_-_moil.mp3
+  License: CC0 1.0, explicitly selected on the creator's upload page.
+  Creator's notice also confirms unrestricted use and modification, including
+  commercial purposes.
+  Changes: retained the full track; level reduced 6.3 dB; 0.8-second opening
+  and 1.5-second closing fades; re-encoded to stereo 44.1 kHz 128 kbps MP3.
+  Note: The filename is for the playback engine. This is a full music track,
+  not a composer-supplied seamless loop. Playback crossfades at the boundary.
+
+swish.wav
+  Original: swish-9.wav from "Swishes Sound Pack" by artisticdude
+  Source: https://opengameart.org/content/swishes-sound-pack
+  Original download: https://opengameart.org/sites/default/files/swishes.zip
+  License: CC0 1.0, explicitly selected on the creator's upload page.
+  Changes: slowed to 72% playback speed, filtered, level reduced 11 dB, given
+  short fades, and converted to mono 44.1 kHz 16-bit WAV.
+
+scan.wav
+  Original: maximize_006.ogg from "Interface Sounds (1.0)" by Kenney
+  Source: https://kenney.nl/assets/interface-sounds
+  Original download: https://kenney.nl/media/pages/assets/interface-sounds/fa43c1dd4d-1677589452/kenney_interface-sounds.zip
+  License: CC0 1.0, stated on the official page and in the package License.txt.
+  Changes: filtered, level reduced 8 dB, given short fades, and converted to
+  mono 44.1 kHz 16-bit WAV.
+
+impact.wav
+  Original: drop_004.ogg from "Interface Sounds (1.0)" by Kenney
+  Source and license: same as scan.wav above.
+  Changes: low-pass filtered, level reduced 5 dB, given short fades, and
+  converted to mono 44.1 kHz 16-bit WAV.
+
+The creators do not endorse this portfolio. These audio licenses are separate
+from the portfolio's source-code license. No anime soundtrack recordings or
+third-party runtime audio service are included.

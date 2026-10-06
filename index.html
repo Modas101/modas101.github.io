@@ -15,6 +15,8 @@
   <link rel="preload" href="fonts/barlow-900.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/barlow-900-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/space-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/space-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="resume-excerpt.png" as="image">
   <link rel="stylesheet" href="style.css">
   <script>
     // The page stays usable if JavaScript, storage, or animation isn't available.
@@ -33,17 +35,30 @@
     <div class="story-slash" aria-hidden="true"></div>
     <div class="story-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
     <div class="story-header"><span>KENNY LIN / THE SHORT VERSION</span><button id="intro-skip" type="button">Skip intro <span>Esc</span></button></div>
-    <div class="story-stage">
-      <div class="story-copy" id="story-copy" aria-live="off"></div>
+    <div class="story-gate" id="story-gate">
+      <span class="gate-kicker">A 51-SECOND OPENING / MUSIC + MOTION</span>
+      <h2>A little<br><em>backstory.</em></h2>
+      <p>How I got here. Better with headphones.</p>
+      <div class="gate-actions"><button class="sound-start" id="story-start-sound" type="button"><span class="sound-glyph" aria-hidden="true">◖))</span> Play with sound <span aria-hidden="true">↗</span></button><button id="story-start-silent" type="button">Watch silently <span aria-hidden="true">→</span></button></div>
+      <button class="gate-read" id="gate-read" type="button">Prefer to read? Here’s the story.</button>
+      <span class="gate-footnote">MUSIC + MOTION, AT YOUR PACE. SKIP ANYTIME.</span>
+    </div>
+    <div class="story-stage" id="story-stage">
+      <div class="story-scenes" id="story-copy" aria-live="off"></div>
       <div class="resume-preview" id="resume-preview" aria-hidden="true">
         <div class="resume-preview-label">RÉSUMÉ EXCERPT / GAME PROJECTS</div>
         <div class="resume-viewport"><img class="resume-excerpt-image" id="resume-paper" src="resume-excerpt.png" width="1668" height="1362" alt=""><div class="scan-target"><span>PROJECT FOUND</span><i></i><i></i><i></i><i></i></div><div class="scan-line"></div></div>
         <span class="resume-preview-footnote">EXPERIENCE & PROJECTS · SEPTEMBER 2026</span>
       </div>
     </div>
-    <div class="story-controls"><div class="story-progress" aria-hidden="true"><span id="story-progress-fill"></span></div><span class="story-count" id="story-count">01 / 17</span><div class="story-transport"><button id="story-prev" type="button" aria-label="Previous scene">Previous</button><button id="story-pause" type="button">Pause</button><button id="story-next" type="button" aria-label="Next scene">Next</button></div><button id="story-read" type="button">Read instead</button></div>
+    <div class="story-controls" id="story-controls"><div class="story-progress" aria-hidden="true"><span id="story-progress-fill"></span></div><span class="story-count" id="story-count">01 / 17</span><div class="story-transport"><button id="story-prev" type="button" aria-label="Previous scene">Previous</button><button id="story-pause" type="button">Pause</button><button id="story-next" type="button" aria-label="Next scene">Next</button></div><button id="story-read" type="button">Read instead</button></div>
   </section>
 
+  <div class="sound-dock" id="sound-dock" hidden aria-label="Sound controls">
+    <button id="sound-toggle" type="button" aria-pressed="false" aria-label="Turn on music and sound"><span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i></span><span id="sound-label">Sound off</span></button>
+    <label class="volume-control"><span class="sr-only">Sound volume</span><input id="sound-volume" type="range" min="0" max="100" value="32" step="1" aria-label="Sound volume"></label>
+  </div>
+  <p id="sound-status" class="sr-only" role="status" aria-live="polite"></p>
   <div class="page-shell">
     <header class="site-header" id="top">
       <a class="wordmark" href="#top" aria-label="Kenny Lin home"><span class="wordmark-symbol" aria-hidden="true">K</span><span>KENNY LIN</span></a>
@@ -98,8 +113,9 @@
 
       <section class="contact section-wrap" id="contact" aria-labelledby="contact-title"><div class="contact-halftone" aria-hidden="true"></div><span class="section-index">03 / SAY HELLO</span><div class="contact-title-row"><h2 id="contact-title">Let's make<br><em>something.</em></h2><span class="contact-star" aria-hidden="true">✦</span></div><div class="contact-links"><a class="contact-email" href="mailto:modas1029@gmail.com">modas1029@gmail.com</a><a class="contact-github" href="https://github.com/Modas101" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">+</span></a></div></section>
     </main>
-    <footer><span>© 2026 KENNY LIN</span><span>VANCOUVER, CANADA</span><a href="#top">BACK TO TOP</a></footer>
+    <footer><span>© 2026 KENNY LIN</span><span>VANCOUVER, CANADA</span><a href="assets/audio/AUDIO-LICENSES.txt" target="_blank" rel="noopener noreferrer">SOUND CREDITS</a><a href="#top">BACK TO TOP</a></footer>
   </div>
+  <script src="audio.js" defer></script>
   <script src="app.js" defer></script>
 </body>
 </html>
