@@ -85,6 +85,7 @@
     copy.setAttribute('aria-atomic', 'true');
     copy.innerHTML = scene.html;
     opening.classList.toggle('has-resume', !!scene.resume);
+    opening.scrollTop = 0;
     document.getElementById('story-count').textContent = `${String(index + 1).padStart(2, '0')} / ${scenes.length}`;
     document.getElementById('story-progress-fill').style.transform = `scaleX(${(index + 1) / scenes.length})`;
     previousButton.disabled = index === 0;
