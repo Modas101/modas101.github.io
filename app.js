@@ -236,6 +236,7 @@
       tracks.forEach(animation => { animation.pause(); animation.currentTime = position; });
       if (audioReady) audio.pause();
     } else {
+      if (soundStatus.textContent.startsWith('Scene ')) soundStatus.textContent = '';
       epoch = now() - position;
       tracks.forEach(animation => { animation.currentTime = position; animation.play(); animation.startTime = epoch; });
       if (audioReady && soundOn) { audio.resume(position / 1000); musicPaused = false; }
@@ -250,6 +251,7 @@
     clearTimeout(window.introFailSafe);
     if (audioReady) audio.pause();
     if (soundOn) musicPaused = true;
+    soundStatus.textContent = '';
     active = true;
     started = false;
     paused = true;
@@ -308,6 +310,7 @@
     run++;
     clearTracks();
     clearTimeout(window.introFailSafe);
+    soundStatus.textContent = '';
     active = false;
     started = false;
     paused = true;
