@@ -1,0 +1,14 @@
+/* Archive opening */
+.archive-intro{display:none;position:fixed;z-index:100;inset:0;background:#d2cdb8;color:#47443b;overflow:hidden;transform-origin:50% 50%}
+.intro-pending .archive-intro{display:block}
+.archive-stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:50% 50%;pointer-events:none}
+.archive-fx{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 45%,transparent 55%,rgba(71,68,59,.18) 100%),repeating-linear-gradient(0deg,rgba(71,68,59,.07) 0 1px,transparent 1px 4px)}
+.archive-controls{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);display:flex;gap:10px;z-index:2}
+.archive-controls button{min-height:44px;display:flex;align-items:center;gap:12px;padding:9px 15px;background:#d2cdb8;border:1px solid #47443b;color:#47443b;font-family:var(--body);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.archive-controls button:hover{background:#47443b;color:#d2cdb8}
+.archive-controls button:focus-visible{outline:2px solid #47443b;outline-offset:3px}
+.archive-controls kbd{font:inherit;font-size:10px;border:1px solid currentColor;padding:1px 4px}
+.archive-dot{width:8px;height:8px;border:1px solid currentColor}
+#archive-sound[aria-pressed="true"] .archive-dot{background:currentColor}
+@media(prefers-reduced-motion:reduce){.archive-intro{display:none!important}}
+@media(max-width:700px){.archive-intro{display:none!important}}
